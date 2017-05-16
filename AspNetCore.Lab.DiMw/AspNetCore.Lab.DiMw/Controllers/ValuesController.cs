@@ -3,17 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using AspNetCore.Lab.DiMw.Services;
 
 namespace AspNetCore.Lab.DiMw.Controllers
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+        ICounterService _counterService = new CounterService(); //TODO: Replace new with DI
+
+        public ValuesController()
+        {
+            
+        }
+
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            _counterService.Increment();
+
+            return Enumerable.Range(1, _counterService.GetValue()).Select(x => $"value{x}");
         }
 
         // GET api/values/5

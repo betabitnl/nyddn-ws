@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using AspNetCore.Lab.DiMw.Services;
+using AspNetCore.Lab.DiMw.CustomMiddleWare;
 
 namespace AspNetCore.Lab.DiMw
 {
@@ -29,6 +31,7 @@ namespace AspNetCore.Lab.DiMw
         {
             // Add framework services.
             services.AddMvc();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,6 +40,7 @@ namespace AspNetCore.Lab.DiMw
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
+          
             app.UseMvc();
         }
     }

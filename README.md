@@ -20,5 +20,3 @@ https://github.com/betabitnl/nyddn/
 Try running some new prerelease features from Rowan Miller's session at MSBuild17?
 
 https://github.com/rowanmiller/Demo-EFCore
-
-TODO: Share PPTX here after workshop

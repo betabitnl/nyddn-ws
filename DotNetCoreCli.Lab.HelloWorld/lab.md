@@ -1,15 +1,40 @@
 # Not your daddy's DotNet workshop
-This repository contains HOL's for the workshop 2017.05.20
 
-TODO: Add link to downloads needed
+Run the following in the console:
 
-https://dot.net
+Check your version:
+``` 
+dotnet --version
+```
 
-https://www.microsoft.com/net/download/core
+Create new console project
+``` 
+dotnet new console
+```
 
-https://github.com/dotnet/cli (2.0 preview install)
+When running the Core 2.0 CLI, it will _automatically_ execute a package restore. Versions before 2.0 _do not_ do this.
+To manually restore packages, run:
+```
+dotnet restore
+```
 
-https://www.visualstudio.com/vs/preview/
+Build the project:
+```
+dotnet build
+```
 
+Build and Run the app
+```
+dotnet run
+```
 
-TODO: Share PPTX here after workshop
+Build to output
+```
+dotnet build --output MyAppje
+```
+
+Run the assembly
+```
+cd MyAppje
+dotnet ASSEMBLYNAME.dll
+```

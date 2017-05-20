@@ -1,0 +1,41 @@
+﻿@page
+    @{
+        ViewData["Title"] = "Home Page";
+
+        @using Models
+        @using Services
+        @using Microsoft.AspNetCore.Mvc.RazorPages
+        @addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+
+            @*
+                Add DI and Postmethod here somewhere
+                *@
+
+
+            <html>
+            <body>
+                @*<div class="jumbotron">
+                    <p>Task list!</p>
+                    <div asp-validation-summary="All"></div>
+                    <form method="POST">
+                        <div class="row">
+                            <div><textarea asp-for="todoItem.Description"></textarea></div>
+                            <div><input class="btn btn-default" type="submit" /></div>
+                        </div>
+                        <div class="row">
+
+                        </div>
+                    </form>
+                </div>*@
+
+                @*<ul>
+
+                    @foreach (var ctc in todoRepository.ListAll())
+                    {
+                        <li>@ctc.Description / @ctc.DateTime</li>
+                    }
+                </ul>*@
+
+            </body>
+        </html>
+    }
